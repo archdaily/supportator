@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-You should include the Javascript in the application adding to `application.js` the following code
+You should include the Javascript in the application adding in `application.js` the following code:
 	
 	//= require supportator
 

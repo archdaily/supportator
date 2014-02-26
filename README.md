@@ -18,6 +18,10 @@ Or install it yourself as:
 
 ## Usage
 
+You should include the Javascript in the application adding to `application.js` the following code
+	
+	//= require supportator
+
 ## Contributing
 
 1. Fork it ( http://github.com/archdaily/supportator/fork )

@@ -1,4 +1,5 @@
 require "supportator/version"
+require "engine"
 
 module Supportator
   # Configuration defaults
@@ -36,6 +37,5 @@ module Supportator
   def self.config
     @config
   end
-
   
 end

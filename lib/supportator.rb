@@ -4,13 +4,11 @@ require "engine"
 module Supportator
   # Configuration defaults
   @config = {
-              :allow_others => false,
               :chrome => 14,
               :safari => 5,
               :firefox => 3,
               :ie => 9,
-              :opera => 12,
-              :lang => "en"
+              :opera => 12
   }
 
   @valid_config_keys = @config.keys

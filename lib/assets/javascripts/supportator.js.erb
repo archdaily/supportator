@@ -74,8 +74,6 @@ $(document).ready(function () {
 		supported = true;
 	else if (browserName == "Opera" && majorVersion >= <%= Supportator.config[:opera] %>)
 		supported = true;
-	else if ( <%= Supportator.config[:allow_others] %> )
-		supported = true;
 	else
 		supported = false;
 });

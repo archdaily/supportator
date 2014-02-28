@@ -1,0 +1,31 @@
+.browser-validator
+  %p
+    = t('your_ie_is_too_old')
+
+  %p
+    = t('change_your_browser')
+
+
+  %ul.clearfix
+    %li
+      %a{:href => "http://www.google.com/chrome", :target => "_blank"}
+        %img{:src => "http://s3.amazonaws.com/neufert-cdn.archdaily.net/assets/8bits-icon-chrome.png"}
+        Chrome
+
+    %li
+      %a{:href => "http://www.mozilla.org", :target => "_blank"}
+        %img{:src => "http://s3.amazonaws.com/neufert-cdn.archdaily.net/assets/8bit-icon-firefox.png"}
+        Firefox
+      
+    %li
+      %a{:href => "http://www.apple.com/safari/", :target => "_blank"} 
+        %img{:src => "http://s3.amazonaws.com/neufert-cdn.archdaily.net/assets/8bits-icon-safari.png"}
+        Safari
+
+  %a{:href => "#", :id => "close-browser-validator"}= t('cerrar_advertencia')
+
+
+:javascript
+  $("#close-browser-validator").click(function(){
+    $(".browser-validator").css({"display":"none"});
+  });

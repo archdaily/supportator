@@ -9,8 +9,9 @@ module Supportator
               :safari => 5,
               :firefox => 3,
               :ie => 9,
-              :opera => 12
-            }
+              :opera => 12,
+              :lang => "en"
+  }
 
   @valid_config_keys = @config.keys
 

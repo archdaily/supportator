@@ -36,9 +36,9 @@ To display the modal when the browser is nos supported you have to add the follo
       }
     });
 
-After `#nav-header` will appear the modal with the message.
+After `#nav-header` the modal with the message will appear.
 
-NOTE: You should have `_browser_validator.html.haml` in the same directory than `_header.html.haml`
+**NOTE**: You should have `_browser_validator.html.haml` in the same directory than `_header.html.haml`
 
 ## Contributing
 

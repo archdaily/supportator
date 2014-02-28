@@ -9,17 +9,17 @@
   %ul.clearfix
     %li
       %a{:href => "http://www.google.com/chrome", :target => "_blank"}
-        %img{:src => "http://s3.amazonaws.com/neufert-cdn.archdaily.net/assets/8bits-icon-chrome.png"}
+        =image_tag "8bits-icon-chrome.png"
         Chrome
 
     %li
       %a{:href => "http://www.mozilla.org", :target => "_blank"}
-        %img{:src => "http://s3.amazonaws.com/neufert-cdn.archdaily.net/assets/8bit-icon-firefox.png"}
+        =image_tag "8bit-icon-firefox.png"
         Firefox
       
     %li
       %a{:href => "http://www.apple.com/safari/", :target => "_blank"} 
-        %img{:src => "http://s3.amazonaws.com/neufert-cdn.archdaily.net/assets/8bits-icon-safari.png"}
+        =image_tag "8bits-icon-safari.png"
         Safari
 
   %a{:href => "#", :id => "close-browser-validator"}= t('cerrar_advertencia')

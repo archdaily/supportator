@@ -1,3 +1,5 @@
+var supported = false;
+
 $(document).ready(function () {
     
     //Step 1: detect (reference http://www.javascripter.net/faq/browsern.htm)
@@ -63,17 +65,17 @@ $(document).ready(function () {
 	//Step 2: filter
 
 	if (browserName == "Chrome" && majorVersion >= <%= Supportator.config[:chrome] %>)
-		return;
+		supported = true;
 	else if (browserName == "Safari" && majorVersion >= <%= Supportator.config[:safari] %>)
-		return;
+		supported = true;
 	else if (browserName == "Firefox" && majorVersion >= <%= Supportator.config[:firefox] %>)
-		return;
+		supported = true;
 	else if (browserName == "Microsoft Internet Explorer" && majorVersion >= <%= Supportator.config[:ie] %>)
-		return;
+		supported = true;
 	else if (browserName == "Opera" && majorVersion >= <%= Supportator.config[:opera] %>)
-		return;
+		supported = true;
 	else if ( <%= Supportator.config[:allow_others] %> )
-		return;
+		supported = true;
 	else
-		$("#nav-header").after("#{escape_javascript(render(:partial => 'browser_validator'))}");
+		supported = false;
 });

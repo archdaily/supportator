@@ -6,21 +6,39 @@ Puts an actualization modal when old browsers are used.
 
 Add this line to your application's Gemfile:
 
-    gem 'supportator'
+	gem 'supportator', :git => "https://github.com/archdaily/supportator.git"
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
+Then you have to generate the configuration files excecuting:
 
-    $ gem install supportator
+	$ rails generate supportator:install
+
+This will create the locale (`supportator.en.yml`,`supportator.en.yml`) and also the template of the modal (`_browser_validator.html.haml`) in your application.
 
 ## Usage
 
 You should include the Javascript in the application adding in `application.js` the following code:
 	
 	//= require supportator
+
+Also you should include the CSS in the application adding in `application.css`the folowing code:
+
+	*= require supportator
+
+To display the modal when the browser is nos supported you have to add the following Javascript in the header of your application:
+
+	$(document).ready(function () {
+      if (!supported) {
+        $("#nav-header").after("#{escape_javascript(render(:partial => 'browser_validator'))}");
+      }
+    });
+
+After `#nav-header` will appear the modal with the message.
+
+NOTE: You should have `_browser_validator.html.haml` in the same directory than `_header.html.haml`
 
 ## Contributing
 

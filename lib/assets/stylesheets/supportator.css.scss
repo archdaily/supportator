@@ -1,12 +1,9 @@
-$help-background : #FFFfea;
-$border-color    : #DDD;
-
 .browser-validator {
-  background-color: $help-background;
+  background-color: #FFFfea;
   font-family: "Courier New";
   padding: 40px 0 30px;
   text-align: center;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid #DDD;
   position: fixed;
   top: 70px;
   right: 0;

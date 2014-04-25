@@ -12,6 +12,7 @@
   ul {
     width: 240px;
     margin: 0 auto 40px;
+    list-style-type: none;
   }
   li {
     float: left;
@@ -27,6 +28,10 @@
     max-width: 600px;
     margin: 0 auto 20px;
     font-size: 15px;
+    font-family: "Courier New";
+  }
+  a {
+    font-family: "Courier New";
   }
 }
 #close-browser-validator {text-transform: uppercase;}

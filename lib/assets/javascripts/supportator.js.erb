@@ -11,6 +11,9 @@ $(document).ready(function () {
 	var majorVersion = parseInt(navigator.appVersion,10);
 	var nameOffset,verOffset,ix;
 
+	// Important optimization for iOS WebView http://stackoverflow.com/questions/4460205/detect-ipad-iphone-webview-via-javascript
+	var isUiWebView = /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(navigator.userAgent);
+
 	// In Opera, the true version is after "Opera" or after "Version"
 	if ((verOffset=nAgt.indexOf("Opera"))!=-1) {
 	 browserName = "Opera";
@@ -74,6 +77,8 @@ $(document).ready(function () {
 		supported = true;
 	else if (browserName == "Opera" && majorVersion >= <%= Supportator.config[:opera] %>)
 		supported = true;
+	else if (isUiWebView)
+		supported = true;  // If it is from WebView in iOs
 	else
 		supported = false;
 });

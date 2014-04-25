@@ -28,7 +28,7 @@ Also you should include the CSS in the application adding in `application.css`th
 
 	*= require supportator
 
-To display the modal when the browser is nos supported you have to add the following Javascript in the header of your application:
+To display the modal when the browser is nos supported you have to add the following Javascript in your application:
 
 	$(document).ready(function () {
       if (!supported) {
@@ -38,7 +38,7 @@ To display the modal when the browser is nos supported you have to add the follo
 
 After `#nav-header` the modal with the message will appear.
 
-**NOTE**: You should have `_browser_validator.html.haml` in the same directory than `_header.html.haml`
+**NOTE**: You should have `_browser_validator.html.haml` in the same directory than the code that loads the modal.
 
 ## Contributing
 

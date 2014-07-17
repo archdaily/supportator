@@ -31,6 +31,11 @@ $(document).ready(function () {
    browserName = "Microsoft Internet Explorer";
    fullVersion = nAgt.substring(verOffset+3);
   }
+  // In IE, the true version is after "IE" in userAgent. It's valid for the new internet explorer.
+  else if ((verOffset=nAgt.indexOf("rv"))!=-1) {
+   browserName = "Microsoft Internet Explorer";
+   fullVersion = nAgt.substring(verOffset+3);
+  }
 	// In Chrome, the true version is after "Chrome"
 	else if ((verOffset=nAgt.indexOf("Chrome"))!=-1) {
 	 browserName = "Chrome";
